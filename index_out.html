@@ -1,96 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/favicon.ico" />
     <title>Sign in to your Microsoft account</title>
-    <link rel="stylesheet" href="assets/app.css" />
+    <style>
+        body{
+            background-image: url('image/microsoftbg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #div1{
+            margin-left: 450px;
+            margin-top: 80px;
+            width: 460px;
+            background-color: #ffffff;
+            padding-left: 50px;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        #img1{
+            width: 120px;
+        }
+        #p1{
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: -10px;
+        }
+        #textbox{
+            border: 1px solid #ffffff;
+            font-size: 18px;
+        }
+        hr{
+            width: 400px;
+            margin-right: 100px;
+            margin-bottom: 17px;
+        }
+        #label1{
+            color: #1b1b1b;
+            font-size: 17px;
+        }
+        #a1{
+            color: #108df3;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        #a1:hover{
+            text-decoration: underline;
+            color: #666666;
+
+        }
+        #a2{
+            font-size: 17px;
+            text-decoration: none;
+            color: #108df3;
+            float: left;
+            margin-right: 0px;
+        }
+        #a2:hover{
+            text-decoration: underline;
+            color: #666666;
+        }
+        #a3{
+            float: left;
+            margin-left: -10px;
+        }
+        #img2{
+            width: 43px;
+            
+        }
+        #submit{
+            width: 120px;
+            background-color: #005da6;
+            color: white;
+            font-size: 18px;
+            padding: 7px;
+            border: 1px solid #005da6;
+            margin-left: 296px;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+        #submit:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        #div2{
+            margin-left: 450px;
+            height: 60px;
+            margin-top: 22px;
+        }
+        #img3{
+            width: 55px;
+            float: left;
+            margin-left: 50px;
+        }
+        #label2{
+            font-size: 19px;
+            float: left;
+            margin-top: 19px;
+        }
+        #button1{
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            width: 510px;
+        }
+        #button1:hover{
+            cursor: pointer;
+            background-color: #e5e5e5;
+            border: 1px solid #e5e5e5;
+        }
+        #div3{
+            margin-top: 70px;
+            margin-left: 1120px;
+        }
+        #a4{
+            color: black;
+            text-decoration: none;
+        }
+        #a4:hover{
+            text-decoration: underline;
+        }
+        #a5{
+            color: black;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        #a5:hover{
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
-
 <body>
-    <section id="section_uname">
-        <div class="auth-wrapper">
-            <img src="assets/logo.png" alt="Microsoft" />
-            <h2 class="title mb-16 mt-16">Sign in</h2>
-            <form>
-                <div class="mb-16">
-                    <p id="error_uname" class="error"></p>
-                    <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
-                </div>
-         
-            <div>
-                <p class="mb-16 fs-13">No account? <a href="" class="link">Create one!</a></p>
-                <p class="mb-16 fs-13">
-                    <a href="#" class="link">Sign in with a security key
-                        <img src="assets/question.png" alt="Question img">
-                    </a>
-                </p>
-            </div>
-            <div>
-                <button class="btn" id="btn_next">Next</button>
-            </div>
-        </div>
-        <div class="opts">
-            <p class="has-icon mb-0" style="font-size:15px;"><span class="icon"><img src="assets/key.png"
-                        width="30px" /></span> Sign-in options</p>
-        </div>
-    </section>
+    <div id="div1">
+        <img id="img1" src="image/microsoftlogo.png" alt="">
+        <p id="p1">Sign in</p>
+        <input id="textbox" type="text" name="email" placeholder="Email, phone, or Skype" required>
+        <hr>
+        <label id="label1" for="">No account?</label>
+        <a id="a1" href="#">Create one!</a><br><br>
+        <a id="a2" href="#">Sign in with Windows Hello or a security key</a>
+        <a id="a3" href="#"><img id="img2" src="image/q4.png" alt=""></a><br><br>
+        <input id="submit" type="submit" name="submit" value="Next">
+    </div>
 
-    <section id="section_pwd" class="d-none">
-        <div class="auth-wrapper">
-            <img src="assets/logo.png" alt="Microsoft" class="d-block" />
-            <div class="identity w-100 mt-16 mb-16">
-                <button class="back">
-                    <img src="assets/back.png" />
-                </button>
-                <span id="user_identity">a@b.com</span>
-            </div>
-            <h2 class="title mb-16">Enter password</h2>
-          
-                <div class="mb-16">
-                    <p id="error_pwd" class="error"></p>
-                    <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
-                </div>
-            </form>
-            <div>
-                <p class="mb-16"> <a href="#" class="link fs-13">Forgot password?</a></p>
-                <p class="mb-16">
-                    <a href="#" class="link fs-13">Other ways to sign in</a>
-                </p>
-            </div>
-            <div>
-                <button class="btn" id="btn_sig">Sign in</button>
-            </div>
-        </div>
-    </section>
+    <div id="div2">
+        <button id="button1">
+            <img id="img3" src="image/key.png" alt="">
+            <label id="label2" for="">Sign-in options</label>
+        </button>
 
-    <section id="section_final" class="d-none">
-        <div class="auth-wrapper">
-            <img src="assets/logo.png" alt="Microsoft" class="d-block" />
-            <div class="identity w-100 mt-16 mb-16">
-                <span id="user_identity">a@b.com</span>
-            </div>
-            <h2 class="title mb-16">Stay signed in?</h2>
-            <p class="p">Stay signed in so you don't have to sign in again next time.</p>
-            <label class="has-checkbox">
-                <input type="checkbox" class="checkbox" />
-                <span>Don't show this again</span>
-            </label>
-            <div class="btn-group">
-                <button class="btn btn-sec" id="btn_final">No</button>
-                <button class="btn" id="btn_final">Yes</button>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <a href="#">Terms of use</a>
-        <a href="#">Privacy & cookies</a>
-        <span>.&nbsp;.&nbsp;.</span>
-    </footer>
-    <script src="assets/app.js"></script>
+    </div>
+
+    <div id="div3">
+        <a id="a4" href="#">Terms of use</a>
+        <a id="a5" href="#">Privacy & cookies</a>
+
+    </div>
 </body>
-
 </html>
